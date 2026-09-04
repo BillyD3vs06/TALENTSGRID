@@ -1,13 +1,13 @@
 export default function SignIn() {
   return (
-    <div className="min-h-screen bg-gray-50 px-4 py-12 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-app-bg px-4 py-12 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-3xl">
-        <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-200 sm:p-8">
+        <div className="rounded-2xl bg-app-surface p-6 shadow-sm ring-1 ring-gray-200 sm:p-8">
           <div className="mb-8">
-            <h1 className="text-2xl font-semibold tracking-tight text-gray-900">
+            <h1 className="text-2xl font-semibold tracking-tight text-app-text">
               Create your profile
             </h1>
-            <p className="mt-2 text-sm text-gray-500">
+            <p className="mt-2 text-sm text-app-muted">
               Add your personal information to complete your profile.
             </p>
           </div>
@@ -18,7 +18,7 @@ export default function SignIn() {
               <div>
                 <label
                   htmlFor="firstname"
-                  className="mb-2 block text-sm font-medium text-gray-700"
+                  className="mb-2 block text-sm font-medium text-app-text"
                 >
                   First name
                 </label>
@@ -27,14 +27,14 @@ export default function SignIn() {
                   name="firstname"
                   type="text"
                   placeholder="John"
-                  className="w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-900 outline-none transition placeholder:text-gray-400 focus:border-gray-900 focus:ring-2 focus:ring-gray-900/10"
+                  className="w-full rounded-lg border border-app-border bg-app-surface px-4 py-2.5 text-sm text-app-text outline-none transition placeholder:text-app-muted focus:border-app-primary focus:ring-2 focus:ring-gray-900/10"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="lastname"
-                  className="mb-2 block text-sm font-medium text-gray-700"
+                  className="mb-2 block text-sm font-medium text-app-text"
                 >
                   Last name
                 </label>
@@ -43,7 +43,7 @@ export default function SignIn() {
                   name="lastname"
                   type="text"
                   placeholder="Doe"
-                  className="w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-900 outline-none transition placeholder:text-gray-400 focus:border-gray-900 focus:ring-2 focus:ring-gray-900/10"
+                  className="w-full rounded-lg border border-app-border bg-app-surface px-4 py-2.5 text-sm text-app-text outline-none transition placeholder:text-app-muted focus:border-app-primary focus:ring-2 focus:ring-gray-900/10"
                 />
               </div>
             </div>
@@ -53,7 +53,7 @@ export default function SignIn() {
               <div>
                 <label
                   htmlFor="username"
-                  className="mb-2 block text-sm font-medium text-gray-700"
+                  className="mb-2 block text-sm font-medium text-app-text"
                 >
                   Username
                 </label>
@@ -62,7 +62,7 @@ export default function SignIn() {
                   name="username"
                   type="text"
                   placeholder="@johndoe"
-                  className="w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-900 outline-none transition placeholder:text-gray-400 focus:border-gray-900 focus:ring-2 focus:ring-gray-900/10"
+                  className="w-full rounded-lg border border-app-border bg-app-surface px-4 py-2.5 text-sm text-app-text outline-none transition placeholder:text-app-muted focus:border-app-primary focus:ring-2 focus:ring-gray-900/10"
                 />
               </div>
 
@@ -78,7 +78,7 @@ export default function SignIn() {
                   name="email"
                   type="email"
                   placeholder="john@example.com"
-                  className="w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-900 outline-none transition placeholder:text-gray-400 focus:border-gray-900 focus:ring-2 focus:ring-gray-900/10"
+                  className="w-full rounded-lg border border-app-border bg-surface px-4 py-2.5 text-sm text-app-text outline-none transition placeholder:text-app-muted focus:border-app-primary focus:ring-2 focus:ring-gray-900/10"
                 />
               </div>
             </div>
@@ -88,7 +88,7 @@ export default function SignIn() {
               <div>
                 <label
                   htmlFor="phone"
-                  className="mb-2 block text-sm font-medium text-gray-700"
+                  className="mb-2 block text-sm font-medium text-app-text"
                 >
                   Phone number
                 </label>
@@ -97,14 +97,14 @@ export default function SignIn() {
                   name="phone"
                   type="tel"
                   placeholder="+1 555 123 4567"
-                  className="w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-900 outline-none transition placeholder:text-gray-400 focus:border-gray-900 focus:ring-2 focus:ring-gray-900/10"
+                  className="w-full rounded-lg border border-app-border bg-surface px-4 py-2.5 text-sm text-app-text outline-none transition placeholder:text-app-muted focus:border-app-primary focus:ring-2 focus:ring-gray-900/10"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="dob"
-                  className="mb-2 block text-sm font-medium text-gray-700"
+                  className="mb-2 block text-sm font-medium text-app-text"
                 >
                   Date of birth
                 </label>
@@ -112,7 +112,7 @@ export default function SignIn() {
                   id="dob"
                   name="dob"
                   type="date"
-                  className="w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-900 outline-none transition focus:border-gray-900 focus:ring-2 focus:ring-gray-900/10"
+                  className="w-full rounded-lg border border-app-border bg-app-surface px-4 py-2.5 text-sm text-app-text outline-none transition focus:border-app-primary focus:ring-2 focus:ring-gray-900/10"
                 />
               </div>
             </div>
@@ -121,7 +121,7 @@ export default function SignIn() {
             <div>
               <label
                 htmlFor="password"
-                className="mb-2 block text-sm font-medium text-gray-700"
+                className="mb-2 block text-sm font-medium text-app-text"
               >
                 Password
               </label>
@@ -130,11 +130,30 @@ export default function SignIn() {
                 name="password"
                 type="password"
                 placeholder="••••••••••••"
-                className="w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-900 outline-none transition placeholder:text-gray-400 focus:border-gray-900 focus:ring-2 focus:ring-gray-900/10"
+                className="w-full rounded-lg border border-app-border bg-app-surface px-4 py-2.5 text-sm text-gray-900 outline-none transition placeholder:text-app-muted focus:border-app-primary focus:ring-2 focus:ring-gray-900/10"
               />
-              <p className="mt-2 text-xs text-gray-500">
+              <p className="mt-2 text-xs text-app-muted">
                 Use at least 8 characters with a mix of letters, numbers and
                 symbols.
+              </p>
+            </div>
+
+            <div>
+              <label
+                htmlFor="password"
+                className="mb-2 block text-sm font-medium text-app-text"
+              >
+                Verify Your Password
+              </label>
+              <input
+                id="verifiedPassword"
+                name="password"
+                type="password"
+                placeholder="••••••••••••"
+                className="w-full rounded-lg border border-app-border bg-app-surface px-4 py-2.5 text-sm text-gray-900 outline-none transition placeholder:text-app-muted focus:border-app-primary focus:ring-2 focus:ring-gray-900/10"
+              />
+              <p className="mt-2 text-xs text-app-muted">
+                Write the exact same password again
               </p>
             </div>
 
@@ -142,13 +161,13 @@ export default function SignIn() {
             <div>
               <label
                 htmlFor="profile-picture"
-                className="mb-2 block text-sm font-medium text-gray-700"
+                className="mb-2 block text-sm font-medium text-app-text"
               >
-                Profile picture
+                Profile Picture
               </label>
 
-              <div className="flex items-center gap-5 rounded-lg border border-dashed border-gray-300 p-5">
-                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-gray-100 text-gray-400">
+              <div className="flex items-center gap-5 rounded-lg border border-dashed border-app-border p-5">
+                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-app-surface text-gray-400">
                   <svg
                     className="h-7 w-7"
                     fill="none"
@@ -167,7 +186,7 @@ export default function SignIn() {
                 <div>
                   <label
                     htmlFor="profile-picture"
-                    className="cursor-pointer rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white transition hover:bg-gray-800"
+                    className="cursor-pointer rounded-md bg-app-primary px-3 py-2 text-sm font-medium transition-property text-app-surface hover:bg-app-secondary"
                   >
                     Upload photo
                   </label>
@@ -178,7 +197,7 @@ export default function SignIn() {
                     accept="image/*"
                     className="sr-only"
                   />
-                  <p className="mt-2 text-xs text-gray-500">
+                  <p className="mt-2 text-xs text-app-mute">
                     PNG, JPG or WEBP up to 5MB.
                   </p>
                 </div>

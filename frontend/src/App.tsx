@@ -6,7 +6,7 @@ import PaletteTest from "./components/PaletteTest";
 function App() {
   return (
     <>
-      <PaletteTest></PaletteTest>
+      <SignIn></SignIn>
     </>
   );
 }
