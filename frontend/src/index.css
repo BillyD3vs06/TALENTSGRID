@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+@theme {
+  --color-app-bg: #f5f7fa; /* Off-White / Icy Grey Canvas */
+  --color-app-surface: #ffffff; /* Pure White for Cards/Containers */
+  --color-app-primary: #106eea; /* Electric Sky Blue (Trust & Freedom) */
+  --color-app-secondary: #7b2cbf; /* Creative Royal Purple (Talent & Premium) */
+  --color-app-accent: #ff5a5f; /* Energetic Coral (High-Conversion CTA) */
+  --color-app-text: #0f172a; /* Deep Slate Navy (High Readability Text) */
+  --color-app-muted: #64748b; /* Secondary Slate Grey (Subtle Text/Icons) */
+  --color-app-border: #e2e8f0; /* Light Grey for Clean Dividers */
+  --color-app-online: #2ecc71; /* Mint Green (Freelancer Availability Dot) */
+}
