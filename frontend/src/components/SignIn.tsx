@@ -61,7 +61,7 @@ export default function SignIn() {
                   id="username"
                   name="username"
                   type="text"
-                  placeholder="@johndoe"
+                  placeholder="@j0hndo3"
                   className="w-full rounded-lg border border-app-border bg-app-surface px-4 py-2.5 text-sm text-app-text outline-none transition placeholder:text-app-muted focus:border-app-primary focus:ring-2 focus:ring-gray-900/10"
                 />
               </div>
@@ -69,7 +69,7 @@ export default function SignIn() {
               <div>
                 <label
                   htmlFor="email"
-                  className="mb-2 block text-sm font-medium text-gray-700"
+                  className="mb-2 block text-sm font-medium text-app-muted"
                 >
                   Email address
                 </label>
@@ -96,7 +96,7 @@ export default function SignIn() {
                   id="phone"
                   name="phone"
                   type="tel"
-                  placeholder="+1 555 123 4567"
+                  placeholder="012-345 67 89"
                   className="w-full rounded-lg border border-app-border bg-surface px-4 py-2.5 text-sm text-app-text outline-none transition placeholder:text-app-muted focus:border-app-primary focus:ring-2 focus:ring-gray-900/10"
                 />
               </div>
@@ -186,7 +186,7 @@ export default function SignIn() {
                 <div>
                   <label
                     htmlFor="profile-picture"
-                    className="cursor-pointer rounded-md bg-app-primary px-3 py-2 text-sm font-medium transition-property text-app-surface hover:bg-app-secondary"
+                    className="cursor-pointer border rounded-md bg-app-primary px-3 py-2 text-sm font-medium transition-all duration-200 scale-105 text-white hover:text-app-surface"
                   >
                     Upload photo
                   </label>
@@ -208,7 +208,7 @@ export default function SignIn() {
             <div>
               <label
                 htmlFor="bio"
-                className="mb-2 block text-sm font-medium text-gray-700"
+                className="mb-2 block text-sm font-medium text-app-text"
               >
                 Bio
               </label>
@@ -217,7 +217,7 @@ export default function SignIn() {
                 name="bio"
                 rows={4}
                 placeholder="Tell us a little about yourself..."
-                className="w-full resize-none rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition placeholder:text-gray-400 focus:border-gray-900 focus:ring-2 focus:ring-gray-900/10"
+                className="w-full resize-none rounded-lg border border-app-border bg-app-surface px-4 py-3 text-sm text-app-text outline-none transition placeholder:text-app-muted focus:border-app-primary focus:ring-2 focus:ring-gray-900/10"
               />
             </div>
 
@@ -226,7 +226,7 @@ export default function SignIn() {
               <div>
                 <label
                   htmlFor="website"
-                  className="mb-2 block text-sm font-medium text-gray-700"
+                  className="mb-2 block text-sm font-medium text-app-text"
                 >
                   Website URL
                 </label>
@@ -234,15 +234,16 @@ export default function SignIn() {
                   id="website"
                   name="website"
                   type="url"
+                  defaultValue={"https://"}
                   placeholder="https://example.com"
-                  className="w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-900 outline-none transition placeholder:text-gray-400 focus:border-gray-900 focus:ring-2 focus:ring-gray-900/10"
+                  className="w-full rounded-lg border border-app-border bg-app-surface px-4 py-2.5 text-sm text-app-text outline-none transition placeholder:text-app-muted focus:border-app-primary focus:ring-2 focus:ring-gray-900/10"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="location"
-                  className="mb-2 block text-sm font-medium text-gray-700"
+                  className="mb-2 block text-sm font-medium text-app-text"
                 >
                   Location
                 </label>
@@ -250,8 +251,8 @@ export default function SignIn() {
                   id="location"
                   name="location"
                   type="text"
-                  placeholder="New York, NY"
-                  className="w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-900 outline-none transition placeholder:text-gray-400 focus:border-gray-900 focus:ring-2 focus:ring-gray-900/10"
+                  placeholder="Stockholm, Sweden"
+                  className="w-full rounded-lg border border-app-border bg-app-surface px-4 py-2.5 text-sm text-app-text outline-none transition placeholder:text-app-muted focus:border-app-primary focus:ring-2 focus:ring-gray-900/10"
                 />
               </div>
             </div>
@@ -269,25 +270,26 @@ export default function SignIn() {
                 name="contact-email"
                 type="email"
                 placeholder="contact@example.com"
-                className="w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm text-gray-900 outline-none transition placeholder:text-gray-400 focus:border-gray-900 focus:ring-2 focus:ring-gray-900/10"
+                className="w-full rounded-lg border border-app-border bg-app-surface px-4 py-2.5 text-sm text-app-text outline-none transition placeholder:text-app-muted focus:border-app-primary focus:ring-2 focus:ring-gray-900/10"
               />
-              <p className="mt-2 text-xs text-gray-500">
-                This must be different from your account email.
+              <p className="mt-2 text-xs text-app-muted">
+                This must be different from your account email. Networkers will
+                use this email to contact you.
               </p>
             </div>
 
             {/* Actions */}
-            <div className="flex flex-col-reverse gap-3 border-t border-gray-200 pt-6 sm:flex-row sm:justify-end">
+            <div className="flex flex-col-reverse gap-3 border-t border-app-border pt-6 sm:flex-row sm:justify-end">
               <button
                 type="button"
-                className="rounded-lg border border-gray-300 px-5 py-2.5 text-sm font-medium text-gray-700 transition hover:bg-gray-50"
+                className="rounded-lg border border-app-border px-5 py-2.5 text-sm font-medium text-app-text transition hover:bg-gray-100 cursor-pointer"
               >
                 Cancel
               </button>
 
               <button
                 type="submit"
-                className="rounded-lg bg-gray-900 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
+                className="rounded-lg bg-app-primary px-5 py-2.5 text-sm font-medium text-white transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-0 focus:ring-offset-0 active:outline-none cursor-pointer"
               >
                 Save profile
               </button>
