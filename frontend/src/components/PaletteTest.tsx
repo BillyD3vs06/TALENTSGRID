@@ -1,6 +1,3 @@
-// src/App.tsx
-import React from "react";
-
 export default function PaletteTest() {
   return (
     // 60% Dominant Color: Canvas Background (bg-app-bg)
