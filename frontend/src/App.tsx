@@ -4,6 +4,7 @@ import LogIn from "./components/LogIn";
 import SignIn from "./components/SignIn";
 import PaletteTest from "./components/PaletteTest";
 import SearchBar from "./components/SearchBar";
+import UserFlow from "./components/UserFlow";
 
 function App() {
   return (
@@ -74,7 +75,7 @@ function SignInPage() {
 function HomePage() {
   return (
     <>
-      <h1>This is the home page</h1>
+      <UserFlow></UserFlow>
     </>
   );
 }
@@ -82,7 +83,6 @@ function HomePage() {
 function SearchPage() {
   return (
     <>
-      <h1>This is the search page</h1>
       <SearchBar />
     </>
   );
