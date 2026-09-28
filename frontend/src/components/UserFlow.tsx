@@ -1,13 +1,25 @@
 export default function UserFlow() {
   const mockups = [
-    { id: 1, talent: "Alex Johnson" },
-    { id: 2, talent: "Emma Wilson" },
-    { id: 3, talent: "Noah Anderson" },
-    { id: 4, talent: "Olivia Martin" },
-    { id: 5, talent: "Liam Taylor" },
-    { id: 6, talent: "Sophia Brown" },
-    { id: 7, talent: "James Davis" },
-    { id: 8, talent: "Mia Wilson" },
+    { id: 1, talent: "Oliver Smith" },
+    { id: 2, talent: "George Jones" },
+    { id: 3, talent: "Harry Taylor" },
+    { id: 4, talent: "Jack Brown" },
+    { id: 5, talent: "Jacob Williams" },
+    { id: 6, talent: "Noah Wilson" },
+    { id: 7, talent: "Charlie Johnson" },
+    { id: 8, talent: "Muhammad Davies" },
+    { id: 9, talent: "Thomas Patel" },
+    { id: 10, talent: "Oscar Robinson" },
+    { id: 11, talent: "William Wright" },
+    { id: 12, talent: "Leo Thompson" },
+    { id: 13, talent: "Henry Evans" },
+    { id: 14, talent: "Arthur Walker" },
+    { id: 15, talent: "Alfie White" },
+    { id: 16, talent: "Freddie Roberts" },
+    { id: 17, talent: "Archie Green" },
+    { id: 18, talent: "Joshua Hall" },
+    { id: 19, talent: "Ibrahim Thomas" },
+    { id: 20, talent: "James Clarke" },
   ];
 
   return (
@@ -31,7 +43,7 @@ export default function UserFlow() {
               {/* Preview on a general idea on how the home page might look when done */}
               <div className="aspect-video overflow-hidden rounded-xl border border-app-border bg-app-surface transition-all duration-200 group-hover:-translate-y-1 group-hover:border-app-primary group-hover:shadow-md">
                 <div className="flex h-full items-center justify-center text-sm font-medium text-app-muted">
-                  Picture
+                  Picture on the product
                 </div>
               </div>
 
