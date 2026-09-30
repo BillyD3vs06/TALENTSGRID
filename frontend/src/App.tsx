@@ -5,6 +5,7 @@ import SignIn from "./components/SignIn";
 import PaletteTest from "./components/PaletteTest";
 import SearchBar from "./components/SearchBar";
 import UserFlow from "./components/UserFlow";
+import PostUploadForm from "./components/PostUploadForm";
 
 function App() {
   return (
@@ -91,7 +92,7 @@ function SearchPage() {
 function UploadPage() {
   return (
     <>
-      <h1>This is the upload page</h1>
+      <PostUploadForm></PostUploadForm>
     </>
   );
 }
