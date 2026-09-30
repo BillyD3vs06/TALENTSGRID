@@ -13,16 +13,28 @@ export default function PostUploadForm() {
 
       <form className="space-y-8">
         {/* Title and description*/}
-        <div>
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           <div>
-            <label htmlFor="title">Title</label>
+            <label
+              htmlFor="title"
+              className="mb-2 block text-sm font-medium text-app-text"
+            >
+              Title
+            </label>
             <input
               id="title"
               name="title"
               type="text"
               placeholder="Website"
-              className="bg-app-surface rouned-lg border border-app-border"
+              className="bg-app-surface px-4 py-2.5 rouned-lg border border-app-border w-full text-app-text text-sm transition outline-none placeholder:text-app-muted focus:border-app-primary focus:ring-2 focus:ring-gray-900/10"
             />
+          </div>
+
+          {/* Description */}
+          <div className="grid">
+            <label htmlFor="description" className="bg-app-surface">
+              Description
+            </label>
           </div>
         </div>
       </form>
