@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import LogIn from "./components/LogIn";
 import SignIn from "./components/SignIn";
-import PaletteTest from "./components/PaletteTest";
 import SearchBar from "./components/SearchBar";
 import UserFlow from "./components/UserFlow";
 import PostUploadForm from "./components/PostUploadForm";
@@ -76,7 +75,7 @@ function SignInPage() {
 function HomePage() {
   return (
     <>
-      <UserFlow></UserFlow>
+      <UserFlow />
     </>
   );
 }
@@ -92,7 +91,7 @@ function SearchPage() {
 function UploadPage() {
   return (
     <>
-      <PostUploadForm></PostUploadForm>
+      <PostUploadForm />
     </>
   );
 }
