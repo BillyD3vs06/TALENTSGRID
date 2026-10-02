@@ -46,6 +46,13 @@ function App() {
           >
             Settings
           </Link>
+
+          <Link
+            to="/aboutPage"
+            className="rounded-lg px-4 py-2 text-sm font-medium text-app-text transition-colors hover:bg-app-bg hover:text-app-primary focus:outline-none focus:ring-2 focus:ring-app-primary/20"
+          >
+            About
+          </Link>
         </nav>
       </div>
       {/* Routes */}
@@ -55,6 +62,7 @@ function App() {
         <Route path="uploadPage" element={<UploadPage />} />
         <Route path="followingPage" element={<FollowingPage />} />
         <Route path="settingsPage" element={<SettingsPage />} />
+        <Route path="aboutPage" element={<AboutPage />} />
       </Routes>
     </BrowserRouter>
   );
@@ -65,11 +73,19 @@ function App() {
 }
 
 function LogInPage() {
-  return <LogIn />;
+  return (
+    <>
+      <LogIn />
+    </>
+  );
 }
 
 function SignInPage() {
-  return <SignIn />;
+  return (
+    <>
+      <SignIn />
+    </>
+  );
 }
 
 function HomePage() {
@@ -100,6 +116,10 @@ function FollowingPage() {
   return (
     <>
       <h1>This is the following page</h1>
+      <p>
+        All the people that are following you and are potential buyers of your
+        product will be shown here
+      </p>
     </>
   );
 }
@@ -108,6 +128,19 @@ function SettingsPage() {
   return (
     <>
       <h1>This is the settings page</h1>
+      <p>This page will contain several settings to the application</p>
+    </>
+  );
+}
+
+function AboutPage() {
+  return (
+    <>
+      <h1>This is the about page</h1>
+      <p>
+        This page will have infromation explaining what TALENTSGRID is and how
+        to use it, as well as information about the creator
+      </p>
     </>
   );
 }
