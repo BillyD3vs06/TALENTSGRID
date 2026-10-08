@@ -1,4 +1,31 @@
+import React from "react";
+
 export default function SignIn() {
+  const [firstName, setFirstName] = React.useState<string>("");
+  const [lastName, setLastName] = React.useState<string>("");
+  const [userName, setUserName] = React.useState<string>("");
+  const [email, setEmail] = React.useState<string>("");
+  const [phoneNumber, setPhoneNumber] = React.useState<string>("");
+  const [dateOfBirth, setDateOfBirth] = React.useState<string>("");
+  const [password, setPassWord] = React.useState<string>("");
+  const [confirmPassword, setConfirmPassword] = React.useState<string>("");
+  const [profilePicture, setProfilePicture] = React.useState<File | null>(null);
+  const [bio, setBio] = React.useState<string>("");
+  const [websiteURL, setWebsiteURL] = React.useState<string>("");
+  const [location, setLocation] = React.useState<string>("");
+  const [contactMail, setContactMail] = React.useState<string>("");
+
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+    console.log(e.target.value);
+  }
+
+  const handleProfilePictureChange = (
+    e: React.ChangeEvent<HTMLInputElement>,
+  ) => {
+    const file = e.target.files?.[0] ?? null;
+    setProfilePicture(file);
+  };
+
   return (
     <div className="min-h-screen bg-app-bg px-4 py-12 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-3xl">
@@ -26,6 +53,10 @@ export default function SignIn() {
                   id="firstname"
                   name="firstname"
                   type="text"
+                  value={firstName}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                    setFirstName(e.target.value)
+                  }
                   placeholder="John"
                   className="w-full rounded-lg border border-app-border bg-app-surface px-4 py-2.5 text-sm text-app-text outline-none transition placeholder:text-app-muted focus:border-app-primary focus:ring-2 focus:ring-gray-900/10"
                 />
@@ -42,6 +73,10 @@ export default function SignIn() {
                   id="lastname"
                   name="lastname"
                   type="text"
+                  value={lastName}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                    setLastName(e.target.value)
+                  }
                   placeholder="Doe"
                   className="w-full rounded-lg border border-app-border bg-app-surface px-4 py-2.5 text-sm text-app-text outline-none transition placeholder:text-app-muted focus:border-app-primary focus:ring-2 focus:ring-gray-900/10"
                 />
@@ -61,6 +96,10 @@ export default function SignIn() {
                   id="username"
                   name="username"
                   type="text"
+                  value={userName}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                    setUserName(e.target.value)
+                  }
                   placeholder="@j0hndo3"
                   className="w-full rounded-lg border border-app-border bg-app-surface px-4 py-2.5 text-sm text-app-text outline-none transition placeholder:text-app-muted focus:border-app-primary focus:ring-2 focus:ring-gray-900/10"
                 />
@@ -77,6 +116,10 @@ export default function SignIn() {
                   id="email"
                   name="email"
                   type="email"
+                  value={email}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                    setEmail(e.target.value)
+                  }
                   placeholder="john@example.com"
                   className="w-full rounded-lg border border-app-border bg-surface px-4 py-2.5 text-sm text-app-text outline-none transition placeholder:text-app-muted focus:border-app-primary focus:ring-2 focus:ring-gray-900/10"
                 />
@@ -93,9 +136,13 @@ export default function SignIn() {
                   Phone number
                 </label>
                 <input
-                  id="phone"
-                  name="phone"
+                  id="phoneNumber"
+                  name="phoneNumber"
                   type="tel"
+                  value={phoneNumber}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                    setPhoneNumber(e.target.value)
+                  }
                   placeholder="012-345 67 89"
                   className="w-full rounded-lg border border-app-border bg-surface px-4 py-2.5 text-sm text-app-text outline-none transition placeholder:text-app-muted focus:border-app-primary focus:ring-2 focus:ring-gray-900/10"
                 />
@@ -109,9 +156,13 @@ export default function SignIn() {
                   Date of birth
                 </label>
                 <input
-                  id="dob"
-                  name="dob"
+                  id="dateOfBirth"
+                  name="dateOfBirth"
                   type="date"
+                  value={dateOfBirth}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                    setDateOfBirth(e.target.value)
+                  }
                   className="w-full rounded-lg border border-app-border bg-app-surface px-4 py-2.5 text-sm text-app-text outline-none transition focus:border-app-primary focus:ring-2 focus:ring-gray-900/10"
                 />
               </div>
@@ -129,6 +180,10 @@ export default function SignIn() {
                 id="password"
                 name="password"
                 type="password"
+                value={password}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                  setPassWord(e.target.value)
+                }
                 placeholder="••••••••••••"
                 className="w-full rounded-lg border border-app-border bg-app-surface px-4 py-2.5 text-sm text-gray-900 outline-none transition placeholder:text-app-muted focus:border-app-primary focus:ring-2 focus:ring-gray-900/10"
               />
@@ -140,15 +195,19 @@ export default function SignIn() {
 
             <div>
               <label
-                htmlFor="password"
+                htmlFor="confirmPassword"
                 className="mb-2 block text-sm font-medium text-app-text"
               >
-                Verify Your Password
+                Confirm Your Password
               </label>
               <input
-                id="verifiedPassword"
-                name="password"
+                id="confirmPassword"
+                name="confirmPassword"
                 type="password"
+                value={confirmPassword}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                  setConfirmPassword(e.target.value)
+                }
                 placeholder="••••••••••••"
                 className="w-full rounded-lg border border-app-border bg-app-surface px-4 py-2.5 text-sm text-gray-900 outline-none transition placeholder:text-app-muted focus:border-app-primary focus:ring-2 focus:ring-gray-900/10"
               />
@@ -194,6 +253,7 @@ export default function SignIn() {
                     id="profile-picture"
                     name="profile-picture"
                     type="file"
+                    onChange={handleProfilePictureChange}
                     accept="image/*"
                     className="sr-only"
                   />
