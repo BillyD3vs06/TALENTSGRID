@@ -1,4 +1,4 @@
-import React from "react";
+import React, { type ReactEventHandler } from "react";
 
 export default function SignIn() {
   const [firstName, setFirstName] = React.useState<string>("");
@@ -11,9 +11,10 @@ export default function SignIn() {
   const [confirmPassword, setConfirmPassword] = React.useState<string>("");
   const [profilePicture, setProfilePicture] = React.useState<File | null>(null);
   const [bio, setBio] = React.useState<string>("");
-  const [websiteURL, setWebsiteURL] = React.useState<string>("");
+  const [websiteURL, setWebsiteURL] = React.useState<string>("https://");
   const [location, setLocation] = React.useState<string>("");
   const [contactMail, setContactMail] = React.useState<string>("");
+  const [acceptTermsCons, setAcceptTermsCon] = React.useState<boolean>(false);
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     console.log(e.target.value);
@@ -275,10 +276,14 @@ export default function SignIn() {
               <textarea
                 id="bio"
                 name="bio"
+                value={bio}
+                onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
+                  setBio(e.target.value)
+                }
                 rows={4}
                 placeholder="Tell us a little about yourself..."
                 className="w-full resize-none rounded-lg border border-app-border bg-app-surface px-4 py-3 text-sm text-app-text outline-none transition placeholder:text-app-muted focus:border-app-primary focus:ring-2 focus:ring-gray-900/10"
-              />
+              ></textarea>
             </div>
 
             {/* Website & location */}
@@ -293,9 +298,12 @@ export default function SignIn() {
                 <input
                   id="website"
                   name="website"
+                  value={websiteURL}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                    setWebsiteURL(e.target.value)
+                  }
                   type="url"
-                  defaultValue={"https://"}
-                  placeholder="https://example.com"
+                  placeholder="https://name/product-name.com"
                   className="w-full rounded-lg border border-app-border bg-app-surface px-4 py-2.5 text-sm text-app-text outline-none transition placeholder:text-app-muted focus:border-app-primary focus:ring-2 focus:ring-gray-900/10"
                 />
               </div>
@@ -310,6 +318,10 @@ export default function SignIn() {
                 <input
                   id="location"
                   name="location"
+                  value={location}
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                    setLocation(e.target.value)
+                  }
                   type="text"
                   placeholder="Stockholm, Sweden"
                   className="w-full rounded-lg border border-app-border bg-app-surface px-4 py-2.5 text-sm text-app-text outline-none transition placeholder:text-app-muted focus:border-app-primary focus:ring-2 focus:ring-gray-900/10"
@@ -326,8 +338,12 @@ export default function SignIn() {
                 Contact mail
               </label>
               <input
-                id="contact-email"
-                name="contact-email"
+                id="contactMail"
+                name="contactMail"
+                value={contactMail}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                  setContactMail(e.target.value)
+                }
                 type="email"
                 placeholder="contact@example.com"
                 className="w-full rounded-lg border border-app-border bg-app-surface px-4 py-2.5 text-sm text-app-text outline-none transition placeholder:text-app-muted focus:border-app-primary focus:ring-2 focus:ring-gray-900/10"
@@ -336,6 +352,41 @@ export default function SignIn() {
                 This must be different from your account email. Networkers will
                 use this email to contact you.
               </p>
+            </div>
+
+            {/* Accept terms and conditions */}
+            <div className="flex items-start gap-3 rounded-lg border border-app-border bg-app-bg p-4">
+              <input
+                id="acceptTermsCons"
+                name="acceptTermsCons"
+                defaultChecked={acceptTermsCons}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                  setAcceptTermsCon(e.target.checked)
+                }
+                type="checkbox"
+                className="mt-1 h-4 w-4 shrink-0 cursor-pointer rounded border-app-border accent-app-primary focus:ring-2 focus:ring-app-primary/20"
+              />
+
+              <label
+                htmlFor="terms"
+                className="text-sm leading-5 text-app-muted"
+              >
+                I agree to the{" "}
+                <a
+                  href="/terms"
+                  className="font-medium text-app-primary hover:underline"
+                >
+                  Terms and Conditions
+                </a>{" "}
+                and{" "}
+                <a
+                  href="/privacy"
+                  className="font-medium text-app-primary hover:underline"
+                >
+                  Privacy Policy
+                </a>
+                .
+              </label>
             </div>
 
             {/* Actions */}
