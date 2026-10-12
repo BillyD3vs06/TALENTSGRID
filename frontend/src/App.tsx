@@ -5,6 +5,7 @@ import SignIn from "./components/SignIn";
 import SearchBar from "./components/SearchBar";
 import UserFlow from "./components/UserFlow";
 import PostUploadForm from "./components/PostUploadForm";
+import Settings from "./components/Settings";
 
 function App() {
   return (
@@ -127,8 +128,7 @@ function FollowingPage() {
 function SettingsPage() {
   return (
     <>
-      <h1>This is the settings page</h1>
-      <p>This page will contain several settings to the application</p>
+      <Settings />
     </>
   );
 }
